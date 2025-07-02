@@ -1,0 +1,13 @@
+:root {
+    --color1: #c9a4ac;
+    --color2: #acc9a4;
+    --blanco: #f2f3f3;
+    --negro: #0f0f0f;
+    --fuentetitulo: "Playfair Display", serif
+    --fuenteparrfo: "Lato", sans-serif;;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--fuentetitulo);
+}
