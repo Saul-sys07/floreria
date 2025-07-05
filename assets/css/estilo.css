@@ -1,13 +1,154 @@
+/* Reset general */
 :root {
-    --color1: #c9a4ac;
-    --color2: #acc9a4;
-    --blanco: #f2f3f3;
-    --negro: #0f0f0f;
-    --fuentetitulo: "Playfair Display", serif
-    --fuenteparrfo: "Lato", sans-serif;;
+  --color1: #ded6ed;
+  --color2: #cbb6f3;
+  --color3: #e6dce7;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --fuenteslogan: "Caveat", cursive;
+  --fuentebase: "Poppins", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/** Globales **/
+
+body {
+  background-color: var(--color3);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: var(--fuentebase);
+
 }
 
 h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+/** header **/
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color2);
+}
+
+.titulo {
+  font-family: var(--fuentebase);
+  color: var(--negro);
+  font-size: 4rem;
+  width: 100%;
+  font-weight: 400;
+}
+
+.titulo span {
+  padding: 0.5rem 1rem;
+  font-family: var(--fuenteslogan);
+  color: var(--negro);
+  border-radius: 5px;
+  font-size: inherit;
+  display: inline;
+  width: 100%;
+  font-weight: 300;
+}
+
+.footer {
+    background-color: var(--color2);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    font-family: var(--fuentebase);
     text-align: center;
-    font-family: var(--fuentetitulo);
+    font-size: 1.6rem;
+    color: var(--blanco);
+}
+
+/**grid**/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/**productos**/
+
+.producto{
+background-color: var(--color1);
+  padding: 1rem;
+
+}
+
+.producto__imagen{
+  width: 100%;
+  height: 25rem; /* o la altura que quieras estandarizar */
+  object-fit: cover;
+  border-radius: 0.9rem;
+  display: block;
+}
+
+.producto__nombre{
+font-size: 4rem;
+}
+
+.producto__precio{
+font-size: 2.8rem;
+}
+
+.producto__nombre,
+.producto__precio{
+  font-family: var(--fuentebase);
+  margin: 1rem, 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.grit img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Elimina espacio extra por imágenes inline */
 }
